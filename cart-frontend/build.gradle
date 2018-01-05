@@ -1,0 +1,25 @@
+apply plugin: 'application'
+
+group = 'net.usermd'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+ext {
+	vaadinVersion = '8.1.0'
+}
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-aop')
+	compile('org.springframework.boot:spring-boot-starter-security')
+	compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.vaadin.spring.extensions:vaadin-spring-ext-boot:2.0.0.RELEASE')
+    compile('org.vaadin.spring.extensions:vaadin-spring-ext-security:2.0.0.RELEASE')
+	testCompile('org.springframework.security:spring-security-test')
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "com.vaadin:vaadin-bom:${vaadinVersion}"
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}

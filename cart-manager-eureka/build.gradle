@@ -1,0 +1,9 @@
+ext {
+	springCloudVersion = 'Finchley.M5'
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}

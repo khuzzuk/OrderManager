@@ -1,0 +1,4 @@
+include 'cart-data'
+include 'user-service'
+include 'cart-frontend'
+include 'cart-manager-eureka'
